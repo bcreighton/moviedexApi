@@ -102,3 +102,26 @@ dist
 
 # TernJS port file
 .tern-port
+
+#fetchful ignores
+# dependencies
+/fetchful/node_modules
+/fetchful/.pnp
+/fetchful.pnp.js
+
+# testing
+/fetchful/coverage
+
+# production
+/fetchful/build
+
+# misc
+/fetchful/.DS_Store
+/fetchful/.env.local
+/fetchful/.env.development.local
+/fetchful/.env.test.local
+/fetchful/.env.production.local
+
+/fetchful/npm-debug.log*
+/fetchful/yarn-debug.log*
+/fetchful/yarn-error.log*

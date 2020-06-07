@@ -1,11 +1,15 @@
 require('dotenv').config()
 const express = require('express')
 const morgan = require('morgan')
+const cors = require('cors')
+const helmet = require('helmet')
 const MOVIEDEX = require('./MOVIEDEX.json')
 
 const app = express();
 
 app.use(morgan('dev'))
+app.use(helmet())
+app.use(cors())
 
 // API TOKEN VALIDATION MIDDLEWARE
 app.use(validateBearerToken = (req, res, next) => {
