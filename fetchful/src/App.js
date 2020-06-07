@@ -17,9 +17,9 @@ class App extends Component {
   state = initialState;
 
   performFetch = () =>
-    fetch('http://localhost:8000/pokemon?name=pik&type=Electric', {
+    fetch('http://localhost:8000/movies?genre=comedy&country=united%20states&average=5', {
       headers: {
-        Authorization: 'Bearer MY-API-TOKEN',
+        Authorization: 'Bearer d6fe160c-a850-11ea-bb37-0242ac130002',
       },
     });
 
@@ -75,7 +75,7 @@ class App extends Component {
             </p>
           </header>
           <pre><code className='language-json'>
-              {JSON.stringify(this.state.options, null, 2)}
+            {JSON.stringify(this.state.options, null, 2)}
           </code></pre>
           {this.state.loading ? <h4>Request loading....</h4> : null}
         </section>
